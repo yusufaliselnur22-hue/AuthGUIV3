@@ -1,0 +1,26 @@
+name: ${name}
+version: ${version}
+main: ${main}
+api-version: "1.21"
+description: Sign tabanlı authentication plugin - Paper 1.21.x
+authors: [ AuthPlugin ]
+website: ""
+
+commands:
+  changepassword:
+    description: Şifreni değiştir
+    usage: /changepassword <yeni_sifre>
+    aliases: [ cp, sifredegistir ]
+  authreload:
+    description: AuthPlugin config yenile
+    usage: /authreload
+    permission: authplugin.admin
+  resetpassword:
+    description: Oyuncunun şifresini sıfırla
+    usage: /resetpassword <oyuncu>
+    permission: authplugin.admin
+
+permissions:
+  authplugin.admin:
+    description: AuthPlugin yönetici izni
+    default: op

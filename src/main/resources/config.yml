@@ -1,0 +1,65 @@
+# =============================================
+#         AuthPlugin Yapılandırma Dosyası
+# =============================================
+
+# Oturum süresi (saat cinsinden). Varsayılan: 24
+session-duration-hours: 24
+
+# Kayıt tabela ayarları
+register-sign:
+  # Tabelada gösterilecek satırlar (4 satır, 0-3)
+  line0: ""                    # 0. satır - oyuncu şifreyi buraya yazar
+  line1: "--- KAYIT ---"
+  line2: "Sifreni yukari yaz"
+  line3: "Bitti'ye bas"
+  glow: true                   # Parlayan mürekkep
+  color: "ORANGE"              # Yazı rengi (ORANGE, RED, GREEN, BLUE, vb.)
+
+# Giriş tabela ayarları
+login-sign:
+  line0: ""                    # 0. satır - oyuncu şifreyi buraya yazar
+  line1: "--- GIRIS ---"
+  line2: "Sifreni yukari yaz"
+  line3: "Bitti'ye bas"
+  glow: true
+  color: "ORANGE"
+
+# Sohbet mesajları
+messages:
+  # Kayıt mesajları
+  register-welcome: "&eHos geldin! &6Kayit olmak icin &e&lkayit tabelasina &6sifreni yaz."
+  register-success: "&aBasariyla kayit oldun! Iyi oyunlar!"
+  register-fail-empty: "&cSifre bos olamaz!"
+  register-fail-short: "&cSifre en az 4 karakter olmali!"
+  register-already: "&cZaten kayitlisin!"
+
+  # Giriş mesajları
+  login-welcome: "&eGeri dondin! &6Giris yapmak icin &e&lgiri tabelasina &6sifreni yaz."
+  login-success: "&aBasariyla giris yaptin! Iyi oyunlar!"
+  login-fail: "&cYanlis sifre! Tekrar dene."
+  login-session: "&aOturum gecerli, otomatik giris yapildi!"
+
+  # IP değişikliği mesajı
+  ip-changed: "&cFarkli bir IP'den baglandin. Lutfen giris yap."
+
+  # Şifre değiştirme
+  change-password-usage: "&cKullanim: /changepassword <yeni_sifre>"
+  change-password-success: "&aSifreni basariyla degistirdin!"
+  change-password-fail-short: "&cYeni sifre en az 4 karakter olmali!"
+  change-password-not-auth: "&cOnce giris yapman gerekiyor!"
+
+  # Sıfırlama (admin)
+  reset-usage: "&cKullanim: /resetpassword <oyuncu>"
+  reset-success: "&a%player% adli oyuncunun sifresi sifirlandi."
+  reset-not-found: "&c%player% adli oyuncu bulunamadi!"
+
+  # Engelleme mesajları
+  blocked-move: "&cGiris yapman gerekiyor! Tabela aciliyor..."
+  blocked-action: "&cGiris yapman gerekiyor!"
+
+  # Config yenileme
+  reload-success: "&aAuthPlugin config yenilendi!"
+
+  # Genel
+  no-permission: "&cBu komutu kullanma izniniz yok!"
+  prefix: "&8[&6Auth&8] &r"
